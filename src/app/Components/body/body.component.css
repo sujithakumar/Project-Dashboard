@@ -1,0 +1,20 @@
+.bodyContainer{
+    overflow: hidden !important;
+    border-left : 2px thin grey !important;
+   
+}
+
+
+li{
+    padding: 2px;
+    margin: 1px;
+    box-shadow: lightgray;
+    cursor:pointer;
+}
+
+.blankLi::before, .blankLi::after{
+    content: " ";
+    padding : 3px;
+    margin: 3px;
+}
+

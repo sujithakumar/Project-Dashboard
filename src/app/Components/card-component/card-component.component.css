@@ -1,0 +1,32 @@
+
+img{
+   margin: 5px;
+    padding: 1px;
+}
+
+.justify-content-between {
+    justify-content: space-between!important;
+}
+h5{
+    font-weight: bolder;
+    text-shadow: lightgray;
+}
+button{
+    width: 95px;
+}
+.btn-primary.disabled {
+    cursor: auto;
+}
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+
+.newComments{
+    width:429px;
+margin : 2px;
+}
+
+.row{
+    margin : 3px;
+    padding : 2px;
+}
