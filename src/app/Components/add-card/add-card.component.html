@@ -6,7 +6,8 @@
             </div>
             <div class="pull-right">
                 <a class="nav-link close" aria-label="Close" (click)="close();activeModal.dismiss('Cross click')">
-                    <img class="rounded-circle" height="30" width="30" src="../../../assets/images/closeIcon.jpg" />
+                    <img class="rounded-circle" height="30" width="30"
+                        src="https://www.pngitem.com/pimgs/m/9-98501_transparent-red-circle-slash-png-red-close-icon.png" />
                 </a>
             </div>
         </div>
@@ -126,8 +127,9 @@
 
                         </div>
                         <div class="form-group col-md-1">
-                            <img class="rounded-circle" src="../../../assets/images/bluePlus.png" height="35" width="35"
-                                (click)="addItem()" />
+                            <img class="rounded-circle"
+                                src="https://images.all-free-download.com/images/graphicthumb/alarm_plus_93583.jpg"
+                                height="35" width="35" (click)="addItem()" />
                         </div>
                     </div>
                     <div *ngIf="submitted && subtaskErr" class="alert alert-danger">
@@ -139,8 +141,8 @@
                             <ol *ngFor="let x of SubTaskArr;index as i;">
                                 <li style="width: 60%">{{x}}</li>
                                 <li style="width: 10%"><img class="rounded-circle"
-                                        src="../../../assets/images/closeIcon.jpg" title="Remove Item" height="25"
-                                        width="25" (click)="removeItem(i)" /></li>
+                                        src="https://www.pngitem.com/pimgs/m/9-98501_transparent-red-circle-slash-png-red-close-icon.png"
+                                        title="Remove Item" height="25" width="25" (click)="removeItem(i)" /></li>
                             </ol>
                         </div>
                     </div>
