@@ -33,15 +33,24 @@ export class CardComponentComponent implements OnInit {
         "commentedOn": this.todayDate
       };
       this.Data['Comments'].push(newData);
+      this.TaskService.updateTask(this.Data).subscribe(results => {
 
+        this.passBack.emit("reload");
+        this.activeModal.dismiss('Cross click');
+
+      });
+    } else {
+      alert("Please enter comments and click add button");
+      return;
     }
-    this.TaskService.updateTask(this.Data).subscribe(results => {
 
-      this.passBack.emit("reload");
-      this.activeModal.dismiss('Cross click');
+  }
 
-    });
+  copyItem() {
 
+  }
+
+  moveItem() {
 
   }
 

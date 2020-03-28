@@ -13,3 +13,12 @@ input[type=text] {
 background-color: black!important;
 color: red;
 }
+
+.dropdown-menu{
+    background-color: darkslategray;
+    color: cyan;
+    font-weight: bolder;
+    padding: 10px;
+    margin:10px;
+       
+}

@@ -33,8 +33,10 @@ export class DoneComponent implements OnInit {
     this.Count = inputData.Comments.length || 0;
     this.Description = inputData.Description || undefined;
     this.dueDate = inputData["Due-date"] || undefined;
-    if (this.Count > 0) {
+    if (this.Count <= 2) {
       this.UsersCommented = inputData.Comments;
+    } else if (this.Count > 2) {
+      this.UsersCommented = inputData.Comments.slice(0, 2);
     }
     this.colorCode = inputData["color-code"];
   }

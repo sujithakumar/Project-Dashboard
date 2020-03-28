@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { filter, map } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { LoginService } from '../../Services/login.service';
 import { TeamDataService } from '../../Services/team-data.service';
@@ -20,10 +21,11 @@ export class HeaderComponent implements OnInit {
   adminId: string = localStorage.getItem('adminID');
   showNotifications = false;
   teamName: string;
+  searchItem;
   adminAvatar;
   adminName;
 
-  constructor(private TeamDataService: TeamDataService, private loginservice: LoginService) { }
+  constructor(private TeamDataService: TeamDataService, private loginservice: LoginService, private ActivatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -72,6 +74,11 @@ export class HeaderComponent implements OnInit {
       }
 
     })
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/');
   }
 
 }

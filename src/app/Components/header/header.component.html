@@ -1,10 +1,10 @@
 <div class="container">
 
-    <nav class="navbar navbar-expand-sm justify-content-between fixed-top  navbar-static-top"
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top navbar-dark bg-dark  navbar-static-top"
         (scroll)="onWindowScroll($event);">
         <div class="navbar-brand pull-left">
             <div class="form-group has-search">
-                <input type="text" class="form-control" placeholder="SEARCH">
+                <input type="text" class="form-control" placeholder="SEARCH" [(ngModel)]="searchItem">
             </div>
         </div>
 
@@ -42,10 +42,14 @@
                             title="Check Notifications!" height="30" width="30" />
                     </a>
                 </li>
-                <li>
-                    <a class="nav-link">
-                        <img class=" rounded-circle" [src]="adminAvatar" [title]="adminName" height="30" width="30" />
-                    </a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false"><img class=" rounded-circle" [src]="adminAvatar"
+                            [title]="adminName" height="30" width="30" /></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" (click)="logout()">Logout</a>
+                    </div>
                 </li>
             </ul>
 

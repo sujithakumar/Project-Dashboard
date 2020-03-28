@@ -22,7 +22,7 @@
                         {{Data.category}}
                     </button>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" *ngIf="Data['Due-date']">
                     <input type="text" value="due date" [(ngModel)]="Data['Due-date']" class="text-muted card-TextBox"
                         readonly />
                 </div>
